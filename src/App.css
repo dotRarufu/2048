@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #333;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.g-2048 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.top-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score {
+  font-size: 30px;
+  justify-self: right;
+}
+
+.board {
+  height: 500px;
+  width: 500px;
+  border-radius: 6px;
+  background-color: #666;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  filter: blur(0px);
+  transition: filter 1s;
+}
+
+.start-btn {
+  padding: 0 20px;
+  margin: 10px;
+  background-color: #1aa260;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.start-btn:active:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.square {
+  height: 112.25px;
+  width: 112.25px;
+  background-color: #555;
+  font-family: Roboto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 4px;
+
+  transition: background-color 0.5s;
+}
+
+.result {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.status {
+  font-size: 40px;
+}
+
+.new {
+  background-color: #006400;
+}
+
+.bg-555 {
+  background-color: #555;
+}
+
+.bg-f26161 {
+  background-color: #f26161;
+}
+
+.bg-f03939 {
+  background-color: #f03939;
+}
+
+.bg-ea0909 {
+  background-color: #ea0909;
+}
+
+.bg-9a0707 {
+  background-color: #9a0707;
+}
+
+.bg-BCD2E8 {
+  background-color: #bcd2e8;
+}
+
+.bg-91BAD6 {
+  background-color: #91bad6;
+}
+
+.bg-73A5C6 {
+  background-color: #73a5c6;
+}
+
+.bg-528AAE {
+  background-color: #528aae;
+}
+
+.bg-2E5984 {
+  background-color: #2e5984;
+}
+
+.bg-1aa260 {
+  background-color: #1aa260;
 }
